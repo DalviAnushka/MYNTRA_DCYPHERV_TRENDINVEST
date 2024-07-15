@@ -1,0 +1,86 @@
+:root {
+  --yellow: linear-gradient(180deg, #F8D49A -146.42%, #FAD79D -46.42%);
+  --orange: #fca61f;
+  --black: #242d49;
+  --gray: #788097;
+  --purple: linear-gradient(180deg, #BB67FF 0%, #C484F3 100%);
+  --pastel-purple: #d8a8f0; /* Pastel purple for future use */
+  --pink: #FF919D;
+  --glass: rgba(255, 255, 255, 0.54);
+  --boxShadow: 0px 19px 60px rgb(0 0, 0 / 8%);
+  --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+  --activeItem: #f799a354;
+}
+
+.AppGlass {
+  display: grid;
+  height: 97vh; /* Adjusted to ensure it fits well */
+  width: 97vw;
+  background: var(--glass);
+  border-radius: 2rem;
+  gap: 16px;
+  grid-template-columns: 11rem auto 20rem;
+  overflow: hidden;
+}
+
+.trend-invest-container {
+  padding: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.54); /* Glass effect */
+  border-radius: 1rem;
+  box-shadow: 0px 19px 60px rgb(0 0, 0 / 8%); /* Box shadow */
+  height: calc(100vh - 40px); /* Full height minus some padding */
+  overflow-y: auto; /* Enable vertical scrolling if content is taller */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trend-invest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 15px; /* Adjust gap between items */
+  justify-items: center;
+}
+
+.trend-invest-item {
+  background: linear-gradient(180deg, #F8D49A -146.42%, #FAD79D -46.42%); /* Gradient background */
+  padding: 15px; /* Padding inside items */
+  border-radius: 10px;
+  box-shadow: -79px 51px 60px rgba(0, 0, 0, 0.08); /* Smaller box shadow */
+  text-align: center;
+  max-width: 300px; /* Ensure items do not exceed a certain width */
+  transition: transform 0.2s;
+}
+
+.trend-invest-item:hover {
+  transform: scale(1.05);
+}
+
+.item-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+.button-group {
+  margin-top: 10px;
+}
+
+.invest-button,
+.buy-button {
+  background-color: #fca61f; /* Keep button background color */
+  color: white;
+  border: none;
+  padding: 8px 12px; /* Adjust button size */
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.invest-button:hover,
+.buy-button:hover {
+  background-color: darkorange; /* Keep the darker shade for hover effect */
+}
